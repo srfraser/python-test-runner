@@ -20,7 +20,7 @@ RUN apt-get -q update \
     && apt-get clean
 
 RUN add-apt-repository --yes ppa:fkrull/deadsnakes
-RUN apt-get -q update \\
+RUN apt-get -q update \
     && apt-get install --yes -q \
     python2.6 \
     python2.6-dev \
