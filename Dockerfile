@@ -1,7 +1,7 @@
 FROM ubuntu:vivid
 
-RUN apt-get -q update
-RUN apt-get install --yes -q \
+RUN apt-get -q update \
+    && apt-get install --yes -q \
     git \
     mercurial \
     python-dev \
@@ -20,8 +20,8 @@ RUN apt-get install --yes -q \
     && apt-get clean
 
 RUN add-apt-repository --yes ppa:fkrull/deadsnakes
-RUN apt-get -q update
-RUN apt-get install --yes -q \
+RUN apt-get -q update \\
+    && apt-get install --yes -q \
     python2.6 \
     python2.6-dev \
     && apt-get clean
