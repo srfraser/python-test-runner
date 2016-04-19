@@ -1,4 +1,4 @@
-FROM ubuntu:vivid
+FROM ubuntu:wily
 
 RUN apt-get -q update \
     && apt-get install --yes -q \
@@ -17,6 +17,8 @@ RUN apt-get -q update \
     curl \
     wget \
     software-properties-common \
+    docker.io \
+    docker-compose \
     && apt-get clean
 
 RUN add-apt-repository --yes ppa:fkrull/deadsnakes
