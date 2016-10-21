@@ -5,7 +5,7 @@ RUN apt-get -q update \
     git \
     mercurial \
     python-dev \
-    python3-dev \
+    python3.5-dev \
     python-tox \
     pypy \
     python-pip \
